@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref, computed } from "vue";
+import { defineProps, ref, computed } from 'vue';
 
 const props = defineProps({
   job: Object,
@@ -14,7 +14,7 @@ const toggleFullDescription = () => {
 const truncatedDescription = computed(() => {
   let description = props.job.description;
   if (!showFullDescription.value) {
-    description = description.substring(0, 90) + "...";
+    description = description.substring(0, 90) + '...';
   }
   return description;
 });
@@ -36,7 +36,7 @@ const truncatedDescription = computed(() => {
           @click="toggleFullDescription"
           class="text-green-500 hover:text-green-600 mb-5"
         >
-          {{ showFullDescription ? "Less" : "More" }}
+          {{ showFullDescription ? 'Less' : 'More' }}
         </button>
       </div>
 
@@ -46,7 +46,7 @@ const truncatedDescription = computed(() => {
 
       <div class="flex flex-col lg:flex-row justify-between mb-4">
         <div class="text-orange-700 mb-3">
-          <i class="fa-solid fa-location-dot text-lg"></i>
+          <i class="pi pi-map-marker text-orange-700"></i>
           {{ job.location }}
         </div>
         <a
